@@ -1,0 +1,199 @@
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header h1 a:hover{
+    text-decoration: none;
+}
+
+
+/*--------------------------- Nav bar Grid ----------------------------*/
+
+header{
+    display: grid;
+    grid-template-columns: 1em 35px 1em auto 50px 1em 100px;
+    grid-template-areas: 
+    ". image . title home . about";
+    align-items: center;
+    background-color: #202020;
+    color: white;
+    padding: 7px 0;
+}
+
+
+img{
+    grid-area: image;
+}
+
+header h1{
+    grid-area: title;
+}
+
+.home{
+    grid-area: home;
+    justify-self: start;
+}
+
+.about{
+    grid-area: about;
+}
+
+/*----------------------------------------------Section One--------------------------------------------*/
+
+.section-one img{
+    box-shadow: 0 0 10px black;
+}
+
+.section-one{
+    margin: auto;
+}
+
+/*----------------------------------------------Section Two--------------------------------------------*/
+
+.section-two{
+    margin: auto;
+    padding-bottom: 1.875em;
+    max-width: 800px;
+    width: 80%;
+}
+
+/*---------------------------------- Section-two-Inner --------------------------------------*/
+
+.recent{
+    width: max-content;
+    margin: auto;
+}
+
+.section-two-inner div{
+    min-width: 200px;
+}
+
+.section-two-inner{
+    display: grid;
+    margin-top: 3em;
+    grid-template-columns: repeat(auto-fit,350px) ;
+    grid-gap: 5vw;
+    padding: 1em;
+    justify-content: center;
+}
+
+.section-two-inner img{
+    box-shadow: 0 0 10px black;;
+}
+
+.more{
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.more{
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/*-------------------------------------------------- Footer -----------------------------------------*/
+
+.container{
+    background-color: #202020;
+    color: white;
+    padding: 1.25em;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+}
+
+/*----------------------------------------------------Fonts----------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+/*------------------------------------------Nav bar Grid--------------------------------------------*/
+
+header h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+header h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/*--------------------------------------------------- Footer ----------------------------------------------*/
+
+.footer-title{
+    font-size: 0.80em;
+    font-weight: bolder;
+}
+
+.footer-copy{
+    font-size: 0.75em;
+}
+
+/*------------------------------------------------- Images ----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+.logo{
+    width: 40px;
+    height: 40px;
+
+    align-self: center;
+
+}
+
+.blog-img{
+    width: 350px;
+}
+
+/*----------------------------------------------Section One--------------------------------------------*/
+
+.section-one{
+    width: 90%;
+}
+
+.section-one img{
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 550px){
+
+/*-----------------------------------------------Nav bar Grid-----------------------------------------------*/
+
+    header h1{
+        font-size: 4vw;
+    }
+
+    header h2{
+        font-size: 3vw;
+    }
+
+}
+
+.section-two-inner a {
+    color: black;
+}

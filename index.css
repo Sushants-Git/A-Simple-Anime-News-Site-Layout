@@ -1,0 +1,283 @@
+body{
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+header h1 a:hover{
+    text-decoration: none;
+}
+
+main a{
+    color: black;
+}
+
+
+/*--------------------------- Nav bar Grid ----------------------------*/
+
+header{
+    display: grid;
+    grid-template-columns: 1em 35px 1em auto 50px 1em 100px;
+    grid-template-areas: 
+    ". image . title home . about";
+    align-items: center;
+    background-color: #202020;
+    color: white;
+    padding: 7px 0;
+}
+
+
+img{
+    grid-area: image;
+}
+
+header h1{
+    grid-area: title;
+}
+
+.home{
+    grid-area: home;
+    justify-self: start;
+}
+
+.about{
+    grid-area: about;
+}
+
+/*--------------------------- hero-section-one-grid ---------------------------------*/
+
+.section-one{
+    display: grid;
+    grid-template-rows: auto auto auto auto 2em;
+    grid-template-columns: 1em auto 30%;
+}
+
+.section-one p, .section-one h1{
+    margin: 0;
+    padding: 0;
+}
+
+.hero-img{
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    width: 100%;
+    box-shadow: 0 0 10px black;
+}
+
+.hero-date{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.hero-title{
+    grid-row: 3;
+    grid-column: 2;
+    align-self: end;
+    max-width: 500px;
+}
+
+.hero-para{
+    grid-row: 4;
+    grid-column: 2;
+    max-width: 600px;
+}
+
+/*---------------------------------- hero-section-two-grid --------------------------------------*/
+
+.section-two div{
+    min-width: 200px;
+}
+
+.section-two{
+    display: grid;
+    margin-top: 3em;
+    grid-template-columns: repeat(auto-fit,350px) ;
+    grid-gap: 5vw;
+    padding: 1em;
+    justify-content: center;
+}
+
+.section-two img{
+    box-shadow: 0 0 10px black;;
+}
+
+.more{
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/*-------------------------------------------------- Footer -----------------------------------------*/
+
+.container{
+    background-color: #202020;
+    color: white;
+    padding: 1.25em;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p{
+    margin: 0;
+}
+
+
+/*----------------------------------------------------Fonts----------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+*/
+
+/*------------------------------------------Nav bar Grid--------------------------------------------*/
+
+header h1{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+}
+
+header h2{
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/*------------------------------------------- hero-section-one-grid ----------------------------------*/
+
+.section-one{
+    color: white;
+    text-shadow: 0 0 10px black;
+}
+
+.hero-date{
+    font-size: 1rem;
+}
+
+.hero-title{
+    font-size: 2.5rem;
+}
+
+.hero-para{
+    font-size: 1rem;
+}
+
+.section-two p{
+    max-width: 300px;
+}
+
+
+/*---------------------------------------- hero-section-two-grid ------------------------------------------*/
+
+.more{
+    grid-column: 1 / -1;
+    justify-self: center;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------- Footer ----------------------------------------------*/
+
+.footer-title{
+    font-size: 0.80em;
+    font-weight: bolder;
+}
+
+.footer-copy{
+    font-size: 0.75em;
+}
+
+/*------------------------------------------------- Images ----------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------------*/
+
+.logo{
+    width: 40px;
+    height: 40px;
+
+    align-self: center;
+
+}
+
+.blog-img{
+    width: 350px;
+}
+
+
+@media (max-width: 550px){
+
+/*-----------------------------------------------Nav bar Grid-----------------------------------------------*/
+
+    header h1{
+        font-size: 4vw;
+    }
+
+    header h2{
+        font-size: 3vw;
+    }
+
+/*--------------------------------------------- hero-section-one-grid -----------------------------------------*/
+
+    .hero-date{
+        font-size: 3vw;
+    }
+
+    .hero-title{
+        font-size: 6vw;
+    }
+
+    .hero-para{
+        font-size: 3vw;
+    }
+
+    .section-two p{
+        max-width: 300px;
+    }
+
+
+    .section-one{
+        display: grid;
+        grid-template-rows: auto auto auto auto 1em;
+        grid-template-columns: 0.5em auto 10%;
+    }
+    
+    .section-one p, .section-one h1{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hero-img{
+        grid-row: 1 / -1;
+        grid-column: 1 / -1;
+        width: 100%;
+        box-shadow: 0 0 10px black;
+    }
+    
+    .hero-date{
+        grid-row: 2;
+        grid-column: 2;
+    }
+    
+    .hero-title{
+        grid-row: 3;
+        grid-column: 2;
+        align-self: end;
+        max-width: 500px;
+    }
+    
+    .hero-para{
+        grid-row: 4;
+        grid-column: 2;
+        max-width: 600px;
+    }
+}
